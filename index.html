@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <title>MAJOR TOWN STORE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span>MAJOR TOWN</span><span>متجر مجتمع فايف إم</span></div>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#">MAJOR <b>TOWN</b></a>
+      <div class="navlinks">
+        <a href="#categories">الأقسام</a>
+        <a href="#products">المنتجات</a>
+        <a href="#how">طريقة الطلب</a>
+      </div>
+      <a class="nav-cta" href="#products">تصفح المتجر</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">THE OFFICIAL ROLEPLAY STORE</p>
+      <h1>ارتقِ بتجربتك<br><em>في MAJOR TOWN</em></h1>
+      <p class="hero-copy">سيارات مميزة، عقارات، ومشاريع خاصة — كل ما تحتاجه لتصنع قصتك داخل المدينة.</p>
+      <a class="gold-btn" href="#categories">اكتشف الأقسام <span>←</span></a>
+    </div>
+    <div class="hero-mark">MT<span>✦</span></div>
+    <div class="hero-bottom"><span>YOUR CITY. YOUR STORY.</span><span>01 / STORE</span></div>
+  </header>
+
+  <main>
+    <section class="section" id="categories">
+      <div class="section-head">
+        <div><p class="eyebrow">EXPLORE THE STORE</p><h2>تسوّق حسب <em>القسم</em></h2></div>
+        <p>اختر القسم الذي تبحث عنه واستكشف العروض المتاحة.</p>
+      </div>
+      <div class="category-grid">
+        <button class="category active" data-filter="all"><span>✦</span><b>كل الأقسام</b><small>عرض جميع المنتجات</small></button>
+        <button class="category" data-filter="cars"><span>🚘</span><b>السيارات</b><small>مركبات مميزة</small></button>
+        <button class="category" data-filter="realestate"><span>⌂</span><b>العقارات والبيوت</b><small>منازل وفلل</small></button>
+        <button class="category" data-filter="business"><span>▤</span><b>المشاريع الخاصة</b><small>مطاعم ومحلات</small></button>
+        <button class="category" data-filter="workshops"><span>⚙</span><b>الورشات</b><small>مشاريع صيانة وتعديل</small></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-head">
+        <div><p class="eyebrow">FEATURED LISTINGS</p><h2>أحدث <em>العروض</em></h2></div>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="banner" id="how">
+      <div><p class="eyebrow">SIMPLE & EASY</p><h2>طلبك يبدأ <em>بخطوة</em></h2>
+      <p>اختر العرض المناسب، اضغط على زر الطلب، ثم أرسل تفاصيل طلبك للإدارة عبر وسيلة التواصل المعتمدة.</p></div>
+      <div class="steps"><div><b>01</b><span>اختر المنتج</span></div><div><b>02</b><span>جهّز رسالة الطلب</span></div><div><b>03</b><span>تواصل مع الإدارة</span></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#">MAJOR <b>TOWN</b></a><p>متجر مجتمع MAJOR TOWN — جميع الحقوق محفوظة.</p><span>ROLEPLAY • COMMUNITY • STORE</span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

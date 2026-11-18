@@ -1,9 +1,9 @@
-// عدّل المنتجات والأسعار من هذه القائمة فقط.
+// عدّل الأسماء والأسعار والوصف من هذه القائمة.
 const products = [
-  {name:"سيارة رياضية مميزة",category:"cars",label:"سيارات",price:"يُحدد لاحقاً",desc:"أضف تفاصيل السيارة وصورها وسعرها هنا.",icon:"🚘"},
-  {name:"سيارة فاخرة",category:"cars",label:"سيارات",price:"يُحدد لاحقاً",desc:"مركبة مميزة لعشاق القيادة داخل المدينة.",icon:"🏎️"},
+  {name:"BMW S1000RR",category:"cars",label:"دراجات نارية",price:"15 دولار",desc:"دراجة رياضية بتصميم BMW وألوان أزرق وأبيض وأحمر.",image:"assets/motorcycle-bmw.png"},
+  {name:"Mercedes-Benz G-Class Mansory",category:"cars",label:"سيارات SUV",price:"18 دولار",desc:"مركبة G-Class باللون الأزرق وتعديلات Mansory.",image:"assets/blue-suv.webp"},
+  {name:"BMW M4",category:"cars",label:"سيارات رياضية",price:"10 دولار",desc:"سيدان BMW رمادية بتصميم رياضي.",image:"assets/bmw-sedan.png"},
   {name:"فيلا خاصة",category:"realestate",label:"عقارات",price:"يُحدد لاحقاً",desc:"أضف موقع العقار ومميزاته وسعره هنا.",icon:"🏡"},
-  {name:"منزل عائلي",category:"realestate",label:"عقارات",price:"يُحدد لاحقاً",desc:"منزل خاص ضمن عالم المدينة.",icon:"🏠"},
   {name:"مطعم خاص",category:"business",label:"مشاريع خاصة",price:"يُحدد لاحقاً",desc:"فرصة لامتلاك وإدارة مشروع مطعم داخل المدينة.",icon:"🍽️"},
   {name:"ورشة سيارات",category:"workshops",label:"ورشات",price:"يُحدد لاحقاً",desc:"مشروع صيانة وتعديل مركبات داخل المدينة.",icon:"🔧"}
 ];
@@ -14,9 +14,11 @@ let currentFilter = "all";
 function render(){
   const shown = currentFilter==="all" ? products : products.filter(p=>p.category===currentFilter);
   count.textContent = `${shown.length} عروض`;
-  grid.innerHTML = shown.map((p,i)=>`
+  grid.innerHTML = shown.map(p=>`
     <article class="product">
-      <div class="product-art" aria-label="${p.name}">${p.icon}</div>
+      <div class="product-art" aria-label="${p.name}">
+        ${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : p.icon}
+      </div>
       <div class="product-info">
         <small>${p.label}</small><h3>${p.name}</h3><p>${p.desc}</p>
         <div class="product-bottom"><span class="price">${p.price}</span>
